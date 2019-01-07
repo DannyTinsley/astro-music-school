@@ -117,7 +117,8 @@
 
   footer{
     bottom:0%;
-     position: relative;
-    left: 50%;
+     position: fixed;
+     text-align: center;
+    left: 40%;
     transform: translate(-50,-50); 
   }
