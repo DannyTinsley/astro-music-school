@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 2019_01_07_193419) do
 
   create_table "students", force: :cascade do |t|
     t.string "name"
+    t.string "image"
     t.string "email"
-    t.string "phone"
     t.string "hobbies"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(version: 2019_01_07_193419) do
 
   create_table "teachers", force: :cascade do |t|
     t.string "name"
+    t.string "image"
     t.string "email"
-    t.string "phone"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -1,18 +1,39 @@
 class StudentsController < ApplicationController
-    def create 
+    
+        $students = Student.all 
+
+        def create 
+            Student.new(
+                name: params["name"],
+                image: params["image"],
+                email: params["email"],
+                hobbies: params["hobbies"]
+                )
+             
+        end
+    
+    def new
         Student.new(
             name: params["name"],
+            image: params["image"],
             email: params["email"],
-            password: params["password"]
-         )
+            hobbies: params["hobbies"]
+            )
+        end
+          
+            
+        
+    
+        def edit
+        Student.find(params[:id])
+        end
+        
+    
+        def destroy 
+            Student.find(params[:id])
+            Student.destroy
+        end
+    
     end
-def new
-    @newStudent= Student.new(
-        name: params["name"],
-        email: params["email"],
-        password: params["password"]
-     )
 
-    redirect_to '/dashboard'
-end
-end
+

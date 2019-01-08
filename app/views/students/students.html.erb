@@ -1,1 +1,21 @@
-<h1>Test</h1>
+<h1>Our Students</h1>
+
+<div class="album text-muted">
+   <div class="container">
+      <div class="row">
+          <div class="card wider">
+          <%= $students.each do |student| %>
+           <strong class="card-text"><%= student.name %>
+            <br>
+           <img src="<%= student.image %>" width="100%" alt="student Image">
+            <br>
+            <h3 class="card-text">Student email: <%= student.email %></h3>
+            <br>
+            <h4 class="card-text">My hobbies : <%= student.hobbies %></h4>
+            </strong>
+         <% end %>
+         </div>
+      </div>
+      
+   </div>
+</div>
