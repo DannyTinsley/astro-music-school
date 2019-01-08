@@ -33,16 +33,16 @@ body {
     min-height: 50rem; /* Can be removed; just added for demo purposes */
     padding-top: 3rem;
     padding-bottom: 3rem;
-    background-color: #f7f7f7;
+    /*background-color: #f7f7f7;*/
   }
   
   .card {
-    float: left;
+    
     width: 33.333%;
-    padding: 10px;
+    padding: 30px;
     margin-bottom: 2rem;
     border: 2px solid black;
-    margin: 15px;
+    margin: 35px;
   }
   
   .card > img {

@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   root 'home#home'
   resources :dashboard
+
+  resources :courses 
 end
 
 

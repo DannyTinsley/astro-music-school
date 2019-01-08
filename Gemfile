@@ -63,4 +63,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rspotify' 
 
-gem "will_paginate", "~> 3.0.4" 
+gem "will_paginate", "~> 3.0.4" , :require => nil
+
+gem "will_paginate-bootstrap"

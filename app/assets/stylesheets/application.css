@@ -131,9 +131,14 @@
    
   }
 
+  #deleteCourse{
+    background-color: rgb(190, 10, 10);
+
+  }
+
   footer{
     bottom:0%;
-     position: fixed;
+     position: sticky;
      text-align: center;
     left: 40%;
     transform: translate(-50,-50); 
