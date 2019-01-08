@@ -1,5 +1,6 @@
 <h1>Our Staff</h1>
 
+
 <div class="album text-muted">
    <div class="container">
       <div class="row">
@@ -8,10 +9,16 @@
            <strong class="card-text"><%= teacher.name %>
             <br>
            <img src="<%= teacher.image %>" width="100%" alt="teacher Image">
-            <br>
-            <h3 class="card-text">Taught By <%= teacher.email %></h3>
-            <br>
-            <h4 class="card-text"><%= teacher.description %></h4>
+           <br>
+           <h3 class="card-text">Age: <%= teacher.age %></h3>
+           
+            <h3 class="card-text">Email: <%= teacher.email %></h3>
+            
+            <h3 class="card-text">Salary: <%= teacher.salary %></h3>
+            
+            <h3 class="card-text">Highest Completed Education: " <%= teacher.education %> "</h3>
+            
+            <h3 class="card-text">About Me: "<%= teacher.description %>"</h3>
             </strong>
          <% end %>
          </div>

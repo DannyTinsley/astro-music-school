@@ -1,11 +1,14 @@
 class TeachersController < ApplicationController
     $teachers = Teacher.all 
-
+    
     def create 
         Teacher.new(
             name: params["name"],
+            age: params["age"],
             image: params["image"],
             email: params["email"],
+            salary: params["salary"],
+            education: params["education"],
             description: params["description"]
             )
          
@@ -13,11 +16,14 @@ class TeachersController < ApplicationController
 
 def new
     Teacher.new(
-        name: params["name"],
-        image: params["image"],
-        email: params["email"],
-        description: params["description"]
-        )
+            name: params["name"],
+            age: params["age"],
+            image: params["image"],
+            email: params["email"],
+            salary: params["salary"],
+            education: params["education"],
+            description: params["description"]
+            )
     end
       
         
