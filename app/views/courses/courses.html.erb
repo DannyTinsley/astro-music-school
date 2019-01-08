@@ -1,1 +1,24 @@
-<h1>Test</h1>
+<h1>Our Courses</h1>
+
+
+<div class="album text-muted">
+   <div class="container">
+      <div class="row">
+          <div class="card wider">
+          <%= $courses.each do |course| %>
+           <strong class="card-text"><%= course.name %>
+            <br>
+            <%= course.session %>
+            <br>
+           <img src="<%= course.image %>" width="100%" alt="Course Image">
+            <br>
+            <h3 class="card-text">Taught By <%= course.teacher %></h3>
+            <br>
+            <h4 class="card-text"><%= course.description %></h4>
+            </strong>
+         <% end %>
+         </div>
+      </div>
+      
+   </div>
+</div>
