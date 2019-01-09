@@ -13,6 +13,7 @@ class CoursesController < ApplicationController
 
     def create
         Course.new(
+            image: params["image"],
             name: params["name"],
             session: params["session"],
             teacher: params["teacher"],
@@ -23,6 +24,7 @@ class CoursesController < ApplicationController
 
       def new
         Course.new(
+            image: params["image"],
             name: params["name"],
             session: params["session"],
             teacher: params["teacher"],

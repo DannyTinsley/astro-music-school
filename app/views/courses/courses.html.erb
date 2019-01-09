@@ -3,7 +3,7 @@
 
 
 <p> Add a Course</p>
-<img src="plus.png" width="5%" alt="Add A Course">
+
 
 
     <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -19,7 +19,7 @@
           
             
             <%= form_for Course.new do |f| %> 
-           
+                <%= f.text_field :image, :label => 'Choose an Image URL' %>
                 <%= f.text_field :name, :label => 'Course Name' %>
                 <%= f.text_field :session, :label => 'Session' %>
                 <%= f.text_field :teacher, :label => 'Teacher'%>
@@ -28,7 +28,7 @@
               <% end %>
           </div>
           <div class="modal-footer d-flex justify-content-center">
-            <button class="btn btn-deep-orange">Sign up</button>
+            <button class="btn btn-deep-orange">Create New Course</button>
           </div>
         </div>
       </div>
