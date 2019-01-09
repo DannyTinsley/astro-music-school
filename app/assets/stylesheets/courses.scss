@@ -38,11 +38,11 @@ body {
   
   .card {
     
-    width: 33.333%;
-    padding: 30px;
+    width: 30%;
+    padding: 20px;
     margin-bottom: 2rem;
     border: 2px solid black;
-    margin: 35px;
+    margin: 20px;
   }
   
   .card > img {
@@ -57,12 +57,26 @@ body {
     width:90%;
     margin: 10px;
     padding: 15px;
+    
+  }
+
+  .card-columns {
+    
+    column-count: 4;
+   
+    
+  }
+
+  .btn btn-primary{
+    width: 50%;
+    text-align: center;
   }
   
-  /*
-  * Custom styles
-  */
-  
+  .card-block {
+    flex: 1;
+   
+    
+  }
   .social-links li a {
     font-size: 1.5em;
   }

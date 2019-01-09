@@ -21,7 +21,15 @@ class CoursesController < ApplicationController
     
       end
 
+      def new
+        Course.new(
+            name: params["name"],
+            session: params["session"],
+            teacher: params["teacher"],
+            description: params["description"]
+        )
     
+      end
 
     def edit
     Course.find(params[:id])

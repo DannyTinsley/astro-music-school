@@ -25,6 +25,7 @@
 
 
 
+
 .headerText{
     color: white;
     font-size: 72px;
@@ -69,6 +70,8 @@
     float: left;
   }
   
+  
+  
   li a {
     display: block;
     color: white;
@@ -80,6 +83,7 @@
  
   li a:hover {
     background-color: #111;
+    color: red;
   }
 
   .centerCarousel{
@@ -127,13 +131,30 @@
     height: 10vh;
   }
   .wider{
-    width:50%;
+    width:30%;
    
+  }
+
+  .card-columns {
+    
+    column-count: 4;
+    
+    @include media-breakpoint-only(lg) {
+      column-count: 3;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 3;
+    }
   }
 
   #deleteCourse{
     background-color: rgb(190, 10, 10);
 
+  }
+
+  .loginModal{
+    left:10%;
+    text-align: center;
   }
 
   footer{

@@ -66,3 +66,5 @@ gem 'rspotify'
 gem "will_paginate", "~> 3.0.4" , :require => nil
 
 gem "will_paginate-bootstrap"
+
+gem "clearance"
