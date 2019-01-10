@@ -5,6 +5,27 @@
 <img src="plus.png" width="5%" alt="Add A Course">
 
 
+
+<%= form_for Student.new do |f| %>
+                
+    <%= f.text_field :name, :required => true, :placeholder => 'Student Name' %>
+    <%= f.text_area :image, :cols => "50", :rows => "1" ,  :required => true, :placeholder => 'Choose an Image URL' %>
+    <%= f.text_field :age, :required => true, :placeholder => 'Student Age' %>
+    <%= f.text_field :education, :required => true, :placeholder => 'Education' %>
+    <%= f.text_field :email, :required => true, :placeholder => 'Student Email'%>
+    <%= f.text_area :hobbies, :cols => "30", :rows => "3" , :required => true, :placeholder => 'Student Hobbies'%>
+    <%= f.button :submit%>
+  <% end %>
+  
+   
+
+
+
+
+
+
+
+
 <div class="card-group">
       <div class="card-columns">
          

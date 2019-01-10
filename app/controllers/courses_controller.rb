@@ -1,24 +1,30 @@
 class CoursesController < ApplicationController
     
      $courses = Course.all 
+     $newCourse = Course.create!
+     
      
 
      def index
-        $locations = Location.paginate(page: params[:page], per_page: 10) 
-        respond_to do |format|
-          format.html
-          format.json { render json: @locations }
-        end 
-      end 
+       @newCourse = Course.new
+    
+
+     end
+
+     
 
     def create
-        Course.new(
-            image: params["image"],
-            name: params["name"],
-            session: params["session"],
-            teacher: params["teacher"],
-            description: params["description"]
-        )
+        # Course.create(
+        #     image: params["image"],
+        #     name: params["name"],
+        #     session: params["session"],
+        #     teacher: params["teacher"],
+        #     description: params["description"]
+        # )
+
+        Course.create(allowed_params)
+        
+        redirect_to '/courses'
     
       end
 
@@ -38,7 +44,7 @@ class CoursesController < ApplicationController
     end
 
     def update
-        $course= Course.find(params[:id])
+        $updateCourse= Course.find(params[:id]).update
      
         if $course.update_attributes(name: params["name"],
             session: params["session"],
@@ -52,10 +58,23 @@ class CoursesController < ApplicationController
        
     end
 
+    def show
+        @course= Course.find(params[:id])
+        
+    end
+    
 
     def destroy 
-        Course.find(params[:id])
-        Course.destroy
+        @course= Course.find(params[:id])
+        @course.destroy
+     
+        redirect_to '/courses' 
     end
+
+    private
+        def allowed_params 
+            params.required(:course).permit(:image, :name, :session, :teacher, :description)
+        end
+
 
 end

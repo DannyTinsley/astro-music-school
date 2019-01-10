@@ -1,17 +1,18 @@
 class StudentsController < ApplicationController
     
         $students = Student.all 
-        
+      
+
+        def index
+            @newStudent= Student.new
+         
+          end
+
         def create 
-            Student.new(
-                name: params["name"],
-                image: params["image"],
-                age: params["age"],
-                education: params["education"],
-                email: params["email"],
-                hobbies: params["hobbies"]
-                )
-             
+            Student.create!(allowed_params)
+        
+            redirect_to '/students'
+        
         end
     
     def new
@@ -38,6 +39,11 @@ class StudentsController < ApplicationController
             Student.destroy
         end
     
+        private
+        def allowed_params 
+            params.required(:student).permit( :name, :image, :age, :education, :email, :hobbies)
+        end
+
     end
 
 

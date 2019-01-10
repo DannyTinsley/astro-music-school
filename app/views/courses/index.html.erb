@@ -1,0 +1,56 @@
+<h1>Our Courses</h1>
+<br>
+
+
+<p> Add a Course</p>
+
+
+              
+            <%= form_for(@newCourse) do |f| %>
+                
+                <%= f.text_field :name, :required => true, :placeholder => 'Course Name' %>
+                <%= f.text_field :session, :required => true, :placeholder => 'Session' %>
+                <%= f.text_area :image, :cols => "50", :rows => "1" ,  :required => true, :placeholder => 'Choose an Image URL' %>
+                <%= f.text_field :teacher, :required => true, :placeholder => 'Teacher'%>
+                <%= f.text_area :description, :cols => "50", :rows => "10" , :required => true, :placeholder => 'Course Description'%>
+                <%= f.button :submit%>
+              <% end %>
+              
+               
+       
+
+
+
+
+
+    <div class="card-group">
+    <div class="card-columns">
+       
+    <div class="card-block">
+        <% $courses.each do |course| %>
+          <div class="card">
+         <strong class="card-text">
+         <%= course.name %>
+          <br>
+          <%= course.session %>
+          <br>
+         <img src="<%= course.image %>" width="100%" alt="Course Image">
+          <br>
+          <h3 class="card-text">Taught By : <%= course.teacher %></h3>
+          
+          <h4 class="card-text">"<%= course.description %>"</h4>
+          </strong>
+          
+          <a href="#" method="POST" class="btn btn-primary">Edit Course</a>
+          <br>
+          <br>
+          <%= link_to 'Destroy', course,  method: :delete, data: { confirm: 'Are you sure?' } %>
+       
+           <br>
+           <br>
+           </div>
+           
+       <% end %>
+       
+       </div>
+       </div>

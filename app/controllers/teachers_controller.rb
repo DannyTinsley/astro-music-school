@@ -1,19 +1,18 @@
 class TeachersController < ApplicationController
     $teachers = Teacher.all 
-    
-    def create 
-        Teacher.new(
-            name: params["name"],
-            age: params["age"],
-            image: params["image"],
-            email: params["email"],
-            salary: params["salary"],
-            education: params["education"],
-            description: params["description"]
-            )
-         
-    end
 
+      
+    def index
+        @newTeacher= Teacher.new
+     
+      end
+
+    def create 
+        Teacher.create!(allowed_params)
+    
+        redirect_to '/teachers'
+    
+    end
 def new
     Teacher.new(
             name: params["name"],
@@ -38,5 +37,11 @@ def new
         Teacher.find(params[:id])
         Teacher.destroy
     end
+
+
+    private
+        def allowed_params 
+            params.required(:teacher).permit( :name, :image, :age, :education, :email, :description, :salary)
+        end
 
 end

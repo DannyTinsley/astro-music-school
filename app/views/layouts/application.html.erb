@@ -7,10 +7,10 @@
     <meta http-equiv="Content-Language" content="en">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    
+   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Abel|Major+Mono+Display|Orbitron|Rajdhani" rel="stylesheet">
-    <%= stylesheet_link_tag "/stylesheets/CSS/External/bootstrap.min.css" %>
+    
     <%= stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -43,6 +43,14 @@
   $('#mycarousel').carousel({
   interval: 5 * 10
 });
+
+
+$(document).ready(function(){
+  $("#myBtn").click(function(){
+    $("#myModal").modal();
+  });
+});
+
 </script>
   </body>
 </html>

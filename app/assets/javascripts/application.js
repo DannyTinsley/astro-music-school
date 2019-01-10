@@ -47,5 +47,12 @@ $(document).ready(function(){
 
 
 
+//modal
 
 
+
+$(document).ready(function(){
+  $("#myBtn").click(function(){
+    $("#newModal").modal();
+  });
+});

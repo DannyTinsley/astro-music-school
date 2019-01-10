@@ -4,6 +4,29 @@
 <p> Add New Teacher </p>
 <img src="plus.png" width="5%" alt="Add A Course">
 
+
+
+
+
+
+
+<%= form_for Teacher.new do |f| %>
+                
+    <%= f.text_field :name, :required => true, :placeholder => 'Teacher Name' %>
+    <%= f.text_field :age, :required => true, :placeholder => 'Teacher Age' %>
+    <%= f.text_area :image, :cols => "50", :rows => "1" ,  :required => true, :placeholder => 'Choose an Image URL' %>
+    <%= f.text_field :education, :required => true, :placeholder => 'Education' %>
+    <%= f.text_field :email, :required => true, :placeholder => 'Teacher Email'%>
+    <%= f.text_field :salary, :required => true, :placeholder => 'Salary' %>
+    <%= f.text_area :description, :cols => "30", :rows => "3" , :required => true, :placeholder => 'Teacher Description'%>
+    <%= f.button :submit%>
+  <% end %>
+  
+
+
+
+
+
 <div class="card-group">
       <div class="card-columns">
          
