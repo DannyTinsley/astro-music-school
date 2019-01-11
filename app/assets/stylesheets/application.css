@@ -58,7 +58,10 @@
   h3{
     color:black;
   }
-
+  
+  h4{
+    color:white;
+  }
   p{
     color:white;
   }
@@ -160,6 +163,14 @@
   .loginModal{
     left:10%;
     text-align: center;
+  }
+
+  td{
+    color: white;
+  }
+
+  th{
+    color: white;
   }
 
   footer{
