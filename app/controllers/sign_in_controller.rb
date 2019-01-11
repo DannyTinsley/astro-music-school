@@ -1,15 +1,15 @@
-class LoginController <Clearance::UsersController 
-  
+class SignInController <Clearance::UsersController 
+    protect_from_forgery with: :null_session
         $Users = User.all 
           
-    
+
             def index
-                @newUser= User.new
+                    redirect_to '/dashboard'
              
               end
     
             def create 
-                User.create!(user_params)
+                
             
                 redirect_to '/dashboard'
             
@@ -28,7 +28,7 @@ class LoginController <Clearance::UsersController
         
         private
         def user_params 
-            params.required(:user).permit( :username, :email, :password)
+            params.permit(:username, :email, :password)
         end
     
     end

@@ -1,6 +1,7 @@
 class UsersController < Clearance::UsersController
     $Users = User.all 
       
+    
 
         def index
             @newUser= User.new
